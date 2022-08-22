@@ -10,7 +10,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>processPensionMicroservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>processPensionMicroservice</name>
 	<description>processPensionMicroservice</description>
 	<properties>
