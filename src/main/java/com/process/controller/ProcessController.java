@@ -21,6 +21,10 @@ public class ProcessController {
 	@Autowired
 	private PensionerDetailMicroserviceClient pensionerDetailMicroserviceClient;
 
+	@GetMapping(value = "/healthcheck")
+	public ResponseEntity<String> healthcheck() {
+		return new ResponseEntity<>("Healthcheck-ok",HttpStatus.OK);
+	}
 	
 	@RequestMapping(value = "/find/{aadhar}", method = RequestMethod.GET)
 	public  ResponseEntity<ProcessPension> findPensionerByAadhar(@PathVariable("aadhar") String aadhar) {
