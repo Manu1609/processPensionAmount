@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,7 +26,7 @@ public class ProcessController {
 		return new ResponseEntity<>("Healthcheck-ok",HttpStatus.OK);
 	}
 	
-	@RequestMapping(value = "/find/{aadhar}", method = RequestMethod.GET)
+	@GetMapping(value = "/find/{aadhar}")
 	public  ResponseEntity<ProcessPension> findPensionerByAadhar(@PathVariable("aadhar") String aadhar) {
 		PensionerDetail pensionerDetail = pensionerDetailMicroserviceClient.findPensionerByAadhar(aadhar);
 		ProcessPension pensionDetail = CalculatePension.calculatePension(pensionerDetail);
