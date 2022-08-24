@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.process.entity.PensionerDetail;
 
-@FeignClient(name = "pensionDetailMicroservice",url="http://18.234.64.9:8080/pension")
+@FeignClient(name = "pensionDetailMicroservice",url="http://54.87.173.131:8080/pension")
 public interface PensionerDetailMicroserviceClient {
 
 	
