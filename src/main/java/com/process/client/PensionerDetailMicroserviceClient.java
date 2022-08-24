@@ -3,8 +3,7 @@ package com.process.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.process.entity.PensionerDetail;
 
@@ -12,7 +11,7 @@ import com.process.entity.PensionerDetail;
 public interface PensionerDetailMicroserviceClient {
 
 	
-	@RequestMapping(value = "/find/{aadhar}", method = RequestMethod.GET)
+	@GetMapping(value = "/find/{aadhar}")
 	public PensionerDetail findPensionerByAadhar(@PathVariable("aadhar") String aadhar);
 	
 	
